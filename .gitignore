@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Vendored FFmpeg/FFprobe binaries (fetched by `npm run setup:ffmpeg`)
+# Exclude the directory's contents but keep the folder itself in the repo.
+vendor/*
+!vendor/.gitkeep
+
+# Runtime state and user media
+# These directories are created automatically by the server on startup.
+server/state/
+media/
+exports/
+
+# Logs and OS cruft
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local editor / tooling
+.vscode/
+.idea/
+*.swp
+
+# Temporary probe / scratch output
+_probe.txt
+ui-dump.html
+
+# Local release report (machine-specific; not part of the published repository)
+GITHUB-RELEASE-REPORT.md

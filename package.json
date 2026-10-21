@@ -1,0 +1,48 @@
+{
+  "name": "autocut-studio",
+  "version": "1.0.0",
+  "description": "Open-source, local-first automatic video editor with customizable editing styles, video previews, privacy redaction, and MP4 export. Fully offline: FFmpeg + Node.js + vanilla web UI.",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "node --test tests/unit.test.js",
+    "test:all": "node --test tests/*.test.js",
+    "make-samples": "node scripts/make-samples.js",
+    "setup:ffmpeg": "node scripts/setup-ffmpeg.js",
+    "reset": "node scripts/reset-project.js",
+    "check": "node scripts/check-env.js",
+    "verify:sample": "node scripts/verify-sample.js",
+    "smoke": "node tests/smoke-export.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "video-editor",
+    "auto-edit",
+    "ffmpeg",
+    "local-first",
+    "offline",
+    "privacy",
+    "redaction",
+    "h264",
+    "mp4"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tina1yan/autocut-studio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tina1yan/autocut-studio/issues"
+  },
+  "homepage": "https://github.com/tina1yan/autocut-studio#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "ffmpeg-static": "^5.2.0",
+    "ffprobe-static": "^3.1.0",
+    "multer": "^2.0.2"
+  },
+  "license": "MIT"
+}

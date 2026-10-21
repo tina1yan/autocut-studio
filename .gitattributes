@@ -1,0 +1,17 @@
+# Normalize text files in the repository to LF, and check them out as LF,
+# so a clone on Windows, macOS and Linux produces identical content.
+* text=auto eol=lf
+
+# Windows batch files must have CRLF line endings to be safe.
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Binary assets — never touched by line-ending conversion.
+*.mp4 binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
